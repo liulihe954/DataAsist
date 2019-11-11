@@ -4,3 +4,9 @@
 .Ruserdata
 *.txt
 *.csv
+*.xlsx
+*.vcf
+*.text
+*.Rproj
+.Rapp.history
+.DS_Store
