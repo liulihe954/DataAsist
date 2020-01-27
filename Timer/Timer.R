@@ -12,7 +12,7 @@ Timer = function(set = 5,Infinite = F,verbose = F){
     message('You just set a infinite loop, please use control+c to exit.')
     repeat {Sys.sleep(1)}
   } else {
-    message('A timer of ',set,' ', units, ' was set at ',Sys.time(),', please use control+c to exit.')
+    message('A timer of ',set,' minutes was set at ',Sys.time(),', please use control+c to exit.')
     for (i in seq_len(set)){
       Sys.sleep(60)
       if (verbose) message(set-i,' mins left.')
