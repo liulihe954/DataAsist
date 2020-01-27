@@ -5,6 +5,11 @@
 #' @param verbose logical, default False; if Ture, a message will pop up every minute as a reminder of the amount of time left.
 
 Timer = function(set = 5,Infinite = F,verbose = F){
+  # read in 
+  library(RCurl)
+  script <- getURL("https://raw.githubusercontent.com/liulihe954/DataAssist/master/Timer/Timer.R", ssl.verifypeer = FALSE)
+  eval(parse(text = script))
+  # run
   tStart = as.POSIXct(Sys.time())
   p1 <- proc.time()
   if (Infinite){
@@ -19,5 +24,5 @@ Timer = function(set = 5,Infinite = F,verbose = F){
     message('time out')
   }
 }
-# test
-Timer(3,Infinite = F,verbose = T)
+### test ###
+test = 'Timer(3,Infinite = F,verbose = T)'
