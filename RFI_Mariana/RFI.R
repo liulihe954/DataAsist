@@ -33,7 +33,7 @@ residual_all = data.frame(Animal = c(),
 for (i in seq_along(animal_index)){
   tmp = RFIdata_35_raw %>% 
     dplyr::filter(Cow == animal_index[i])
-  lmod = lm(DMI ~  TRT + ECMDay + BW + MBW, data = tmp)
+  #lmod = lm(DMI ~  TRT + ECMDay + BW + MBW, data = tmp)
   mean_rid = mean(residuals(lmod))
   residual_all[i,1] = animal_index[i]
   residual_all[i,2] = mean_rid
