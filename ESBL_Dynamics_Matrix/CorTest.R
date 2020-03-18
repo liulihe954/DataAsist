@@ -22,5 +22,5 @@ out_final = out %>% dplyr::filter(Cor != 'NA',pval !='NA') %>%
   dplyr::filter(Cor > thres1,pval < pval_thres)
 
 # output format
-write.table(out, "CorOut_all.txt", sep="\t")
-write.table(out_final, "CorOut_0.8_0.05.txt", sep="\t")
+write.csv(out, "CorOut_all.csv",row.names = F,quote = F)
+write.csv(out_final, "CorOut_0.8_0.05.csv",row.names = F,quote = F)
